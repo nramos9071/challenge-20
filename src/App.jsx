@@ -11,7 +11,7 @@ function App() {
     <>
     <NavTabs />
     <div>
-      <h1>Nicholas Ramos</h1>
+      {/* <h1>Nicholas Ramos</h1> */}
       <Outlet />
     </div>
     </>

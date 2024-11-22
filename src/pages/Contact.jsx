@@ -1,12 +1,13 @@
 import React from 'react';
+import './Contact.css';
 
 export default function Contact() {
     return (
-        <div>
+        <div className="contact-container">
             <div>
                 <h1>Contact</h1>
             </div>
-            <div>
+            <div className="form-container">
                 <label for="name">Name:</label>
                 <input type="text" id="name"></input>
                 <label for="email">Email:</label>

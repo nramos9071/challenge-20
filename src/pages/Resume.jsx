@@ -1,16 +1,19 @@
 import React from 'react';
+import './Resume.css';
 
 export default function Resume() {
     return (
-        <div>
+        <div className="resume-container">
             <div>
                 <h1>Resume</h1>
-            </div>
-            <div>
                 <section>
                     <h2>Skills & Abilities</h2>
                 </section>
-                <section>
+            </div>
+            <div>
+                <div className="skills">
+              
+                <section id="skill-lists">
                     <h3>Technical Skills</h3>
                     <ul>
                         <li>HTML</li>
@@ -23,7 +26,7 @@ export default function Resume() {
                         <li>MongoDB</li>
                     </ul>
                 </section>
-                <section>
+                <section id="skill-lists">
                     <h3>Soft Skills</h3>
                     <ul>
                         <li>Communication</li>
@@ -33,6 +36,7 @@ export default function Resume() {
                         <li>Adaptability</li>
                     </ul>
                 </section>
+                </div>
                 <section>
                     <h2>Experience</h2>
                     <ul>
