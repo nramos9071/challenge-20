@@ -1,6 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import NavTabs from './components/NavTabs';
+import Footer from './components/Footer';
 import './App.css';
 
 
@@ -13,6 +14,7 @@ function App() {
     <div>
       {/* <h1>Nicholas Ramos</h1> */}
       <Outlet />
+      <Footer />
     </div>
     </>
   );

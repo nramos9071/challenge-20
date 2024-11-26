@@ -18,12 +18,18 @@ export default function Contact() {
                 console.log('Email:', email);
                 console.log('Message:', message);
 
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
                 if (!name || !email || !message) {
                     console.log('One or more fields are empty.');
                     alert('Please fill in all fields.');
                     return;
+                } else if (!emailRegex.test(email)) {
+                    console.log('Invalid email format.');
+                    alert('Please enter a valid email address.');
+                    return;
                 } else {
-                    console.log('All fields are filled.');
+                    console.log('All fields are filled and email is valid.');
                     alert('Thank you for your message! It was received and I will get back to you as soon as possible.');
                 }
             });
