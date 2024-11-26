@@ -6,6 +6,13 @@ export default function Resume() {
         <div className="resume-container">
             <div>
                 <h1>Resume</h1>
+
+                <section>
+                    <h3>Download Resume</h3>
+                    <a id="resume" href="../assets/Files/Resume.pdf" download="Nicholas_Ramos_Resume.pdf">
+                        Download PDF
+                    </a>
+                </section>
                 <section>
                     <h2>Skills & Abilities</h2>
                 </section>

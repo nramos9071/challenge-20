@@ -1,30 +1,36 @@
 import React, { useEffect } from 'react';
 import './Contact.css';
-import '../assets/js/contact.js';
 
 export default function Contact() {
-        useEffect(() => {
-            const submitButton = document.querySelector('.submit-button');
-    
-            if (submitButton) {
-                submitButton.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    console.log('Submit button clicked.');
-                    const name = document.querySelector('#name').value.trim();
-                    const email = document.querySelector('#email').value.trim();
-                    const message = document.querySelector('#message').value.trim();
-    
-                    if (!name || !email || !message) {
-                        alert('Please fill in all fields.');
-                        return;
-                    }
-    
-                    console.log('Name:', name);
-                    console.log('Email:', email);
-                    console.log('Message:', message);
-                });
-            }
-        }, []);
+    useEffect(() => {
+        const submitButton = document.querySelector('.submit-button');
+        console.log('Submit button:', submitButton);
+
+        if (submitButton) {
+            submitButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                console.log('Submit button clicked.');
+                const name = document.querySelector('#name').value.trim();
+                const email = document.querySelector('#email').value.trim();
+                const message = document.querySelector('#message').value.trim();
+
+                console.log('Name:', name);
+                console.log('Email:', email);
+                console.log('Message:', message);
+
+                if (!name || !email || !message) {
+                    console.log('One or more fields are empty.');
+                    alert('Please fill in all fields.');
+                    return;
+                } else {
+                    console.log('All fields are filled.');
+                    alert('Thank you for your message! It was received and I will get back to you as soon as possible.');
+                }
+            });
+        } else {
+            console.error('Submit button not found');
+        }
+    }, []);
 
     return (
         <div className="contact-container">
